@@ -5,7 +5,7 @@ ip_address=`ifconfig eth0 | grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1
 hostanme=`hostname`
 mail_doxer()
 {
-  mail -s "Message de la VM $hostname ($ip_address)" ianbogda@gmail.com</tmp/result.txt
+  mail -s "Message de la VM $hostname ($ip_address)" proxmox-tech@cdgfpt46.fr</tmp/result.txt
 }
 
 check_status()
