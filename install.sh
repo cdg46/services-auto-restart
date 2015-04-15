@@ -23,9 +23,9 @@ if [[ ! -e /usr/local/bin/autorestart-services.sh ]]; then
 	rm -R services-auto-restart
 fi
 
-# Create a CRON script that runs each day to update our blacklists
-if [[ ! -e /etc/cron.h/autorestart-services ]]; then
-cat > /etc/cron.h/autorestart-services <<END
+# Create a CRON script that runs each 10 minutes check statuses
+if [[ ! -e /etc/cron.d/autorestart-services ]]; then
+cat > /etc/cron.d/autorestart-services <<END
 # Run every 10 minutes
 */10 * * * *      root /usr/local/bin/autorestart-services.sh
 END
